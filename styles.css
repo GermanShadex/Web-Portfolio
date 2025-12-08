@@ -24,6 +24,7 @@ body {
 .navbar h2 {
     color: rgba(221, 173, 15, 0.87);
     font-weight: 600;
+    text-wrap: nowrap;
 }
 
 .navbar ul {
@@ -51,6 +52,25 @@ body {
 .navbar ul li:last-child a {
     margin: 0;
 }
+/*---------------------Hire Me Button------------------------*/
+
+.hire-btn::before {
+      content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(221, 173, 15, 0.5)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
 
 .hire-btn {
     color: rgba(221, 173, 15, 0.87);
@@ -62,15 +82,23 @@ body {
     height: 40px;
     width: 100px;
     border-radius: 10px;
-    transition: background-color 0.3 ease;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
 
     cursor: pointer;
 }
 
 .hire-btn:hover {
-    background-color: rgb(39, 36, 46);
-    color: rgba(255, 215, 0, 0.87);
-    border-color: rgba(255, 215, 0, 0.87);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(221, 173, 15, 0.87);
+    color: rgba(221, 173, 15);
+}
+
+
+.hire-btn:hover::before {
+    opacity: 1;
+    transform: rotate(-45deg) translateY(110%);
 }
 
 /*-----------MainPage Settings----------------*/
@@ -106,7 +134,7 @@ body {
 
 .main img {
     margin-top: 50px;
-    width: 300px;
+    width: 20vw;
     border-radius: 50px;
 }
 
@@ -116,7 +144,7 @@ body {
     justify-content: center;
     text-align: center;
     color : white;
-    flex-wrap: nowrap;
+    
     gap: 50px
 }
 
