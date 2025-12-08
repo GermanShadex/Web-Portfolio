@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Pixelify+Sans:wght@400..700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+body {
+    height: 100hv;
+    background-color: rgb(26, 24, 31);
+}
+
+/*-----------------Navigation Bar Settings-----------------*/
+.navbar {
+    display :flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 20px;
+}
+
+.navbar h2 {
+    color: rgba(221, 173, 15, 0.87);
+    font-weight: 600;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: rgba(221, 173, 15, 0.87);
+    font-size: 20px;
+    margin-right: 25px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: rgba(255, 215, 0, 0.87);
+    text-shadow: 2 px 2px 4px rgba(255, 215, 0, 0.87);
+}
+
+.navbar ul li:last-child a {
+    margin: 0;
+}
+
+.hire-btn {
+    color: rgba(221, 173, 15, 0.87);
+    font-size: 18px;
+    font-weight: 400;
+    border-width: 1;
+    border-color: rgba(221, 173, 15, 0.87);
+    background-color: rgba(26, 24, 31);
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    transition: background-color 0.3 ease;
+
+    cursor: pointer;
+}
+
+.hire-btn:hover {
+    background-color: rgb(39, 36, 46);
+    color: rgba(255, 215, 0, 0.87);
+    border-color: rgba(255, 215, 0, 0.87);
+}
+
+/*-----------MainPage Settings----------------*/
+.main {
+    display: flex;
+    height: 640px;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.main h4 {
+    font-size: 32px;
+    color: white;
+    font-weight: 600;
+}
+
+.main h4 span {
+    color : rgba(221, 173, 15, 0.87);
+    text-decoration: underline;
+}
+
+.main p.title {
+    font-size: 44px;
+    color : white;
+}
+
+.main p.subtitle {
+    font-size: 18px;
+    color:rgb(180, 180, 180);
+}
+
+.main img {
+    margin-top: 50px;
+    width: 300px;
+    border-radius: 50px;
+}
+
+/*------------Guarantee Settings-------------------*/
+.guarantee {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color : white;
+    flex-wrap: nowrap;
+    gap: 50px
+}
+
+.item {
+    width : 250px;
+    height: 100%;
+    background-color: rgba(255,255,255, 0.05);
+    padding: 20px;
+    border-radius: 20px;
+    transition: all 0.3 ease;
+}
+
+.guarantee .item .icon {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.guarantee .item:hover {
+    background-color: rgba(255,255,255, 0.1);
+}
+
+.guarantee .item .info h3 {
+    margin-bottom: 5px;
+}
+
+.guarantee .item .info p {
+    color : rgb(180, 180, 180);
+}
+
+/*-----------------About Me Settings-------------------*/
+
+.about-container {
+    margin: 25px;
+    margin-top: 100px;
+    background-color: rgba(221, 173, 15, 0.87);
+    padding: 10px;
+}
+
+.about-container h1 {
+    margin-bottom: 10px;
+}
+
+.about-container ul {
+    list-style: none;
+}
+
+.about-container ul li {
+    margin-top: 10px;
+}
+
+
+/*-----------------Skill Settings-------------------*/
+.skill-container {
+    margin: 25px;
+    margin-top: 100px;
+    color: white;
+}
+
+.skill-container h1 {
+    margin: 10px;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.skills .item {
+    display: flex;
+    min-width: fit-content;
+}
+
+.skills .item .picture {
+    flex-shrink: 0;
+}
+
+.skills .item .info {
+    display: flex;
+    max-width: 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    row-gap: 8px;
+    transition: opacity 0.45s ease, max-width 0.45s ease, margin-left 0.45s ease;
+}
+
+.skills .item img {
+    height: 250px;
+    border-radius: 20px;
+}
+
+.skills .item:hover .info {
+    margin: 20px;
+    opacity: 1;
+    max-width: 260px;
+    pointer-events: auto;
+}
