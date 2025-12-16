@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto Flex', sans-serif;
+    font-size: 12px;
 }
 
 body {
@@ -17,19 +18,22 @@ body {
 .navbar {
     color: rgba(221, 173, 15, 0.87); 
     text-wrap: nowrap;
-    
-    padding: 0 2vh;
-
+    padding: 0 3vw;
 }
+
+.navbar h2 {
+    font-size: 30px;
+}
+
 
 .navbar ul {
     display: flex;
     gap: 30px;
+    margin: 0 2vw 0 2vw;
 }
 
 .navbar ul li {
     list-style: none;
-    
 }
 
 .navbar ul li a {
@@ -40,7 +44,7 @@ body {
 
 .navbar ul li a:hover {
     color: rgba(255, 215, 0, 0.87);
-    text-shadow: 2 px 2px 4px rgba(255, 215, 0, 0.87);
+    text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.87);
 }
 
 .navbar ul li:last-child a {
@@ -48,7 +52,7 @@ body {
 }
 
 /*-----------------Desktops---------------------------------*/
-@media screen and (width >= 800px){
+@media screen and (width >= 950px){
     .navbar {
         display :flex;
         justify-content: space-between;
@@ -57,8 +61,8 @@ body {
     }
 
     .navbar h2 {
-        font-size: 40px;
-    }
+        font-size: 5vh;
+}
 
     .navbar ul {
         gap: 5vw;
@@ -67,10 +71,17 @@ body {
     .navbar ul li a {
         font-size: 2em;
     }
+
+    .hire-btn {
+        height: 40px;
+        width: 110px;
+        font-size: 18px;
+        border-radius: 10px;
+    }
 }
 
 /*-----------------Mobile Devices-------------------------*/
-@media screen and (width < 800px){
+@media screen and (width < 950px){
     .navbar {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -82,14 +93,24 @@ body {
 
     .navbar h2{
         grid-column-start: 2;
+        font-size: calc(12px + 3vw);
         text-align: center;
-        font-size: 3vh;
         place-self: center;
     }
 
     .holografic-container {
         grid-column-start: 3;
-        transform: scale(60%);
+    }
+
+    .holografic-container .button-container {
+        justify-self: end;
+    }
+
+    .hire-btn {
+        height: calc(10px + 2vh);
+        width: calc(50px + 2vw);
+        font-size: calc(3px + 1vw);
+        border-radius: 8px;
     }
 
     .navbar ul {
@@ -101,7 +122,7 @@ body {
     }
 
     .navbar ul li a {
-        font-size: 1em;
+        font-size: calc(10px + 1vw);
     }
 
 }
@@ -109,33 +130,30 @@ body {
 /*---------------------Hire Me Button------------------------*/
 
 .hire-btn::before {
-      content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    0deg, 
-    transparent, 
-    transparent 30%, 
-    rgba(221, 173, 15, 0.5)
-  );
-  transform: rotate(-45deg);
-  transition: all 0.5s ease;
-  opacity: 0;
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        0deg, 
+        transparent, 
+        transparent 30%, 
+        rgba(221, 173, 15, 0.5)
+    );
+    transform: rotate(-45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
 }
 
 .hire-btn {
     color: rgba(221, 173, 15, 0.87);
-    font-size: 18px;
     font-weight: 400;
     border-width: 1;
     border-color: rgba(221, 173, 15, 0.87);
     background-color: rgba(26, 24, 31);
-    height: 40px;
-    width: 110px;
-    border-radius: 10px;
+
     position: relative;
     overflow: hidden;
     transition: all 0.5s ease;
@@ -157,37 +175,13 @@ body {
 
 /*-----------MainPage Settings----------------*/
 
-
-/*------------------Desktop-------------------*/
-@media screen and (width >= 800px){
-    .main {
-        height: 100vh;
-    }
-
-    .main p.titel {
-        text-wrap: nowrap;
-        
-    }
-}
-
-/*-----------------Mobile Devices-------------------------*/
-@media screen and (width < 800px){
-    .main {
-        transform: scale(80%);
-    }
-
-
-
-
-}
-
-
 .main {
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
     justify-content: center;
+    min-width: 385px;
 }
 
 .main h4 {
@@ -199,32 +193,77 @@ body {
 .main h4 span {
     color : rgba(221, 173, 15, 0.87);
     text-decoration: underline;
+    font-size: 100%;
 }
+
 
 .main p.title {
     font-size: 44px;
     color : white;
+    text-align: center;
 }
 
 .main p.subtitle {
     font-size: 18px;
+    text-align: center;
     color:rgb(180, 180, 180);
 }
 
-.main img {
-    margin-top: 50px;
-    width: 20vw;
-    border-radius: 50px;
+
+
+/*------------------Desktop-------------------*/
+@media screen and (width >= 800px){
+    .main {
+        height: 100vh;
+    }
+
+    .main p.titel {
+        text-wrap: nowrap;
+        
+    }
+    .main img {
+        margin-top: 50px;    
+        width: 20vw;
+        border-radius: 50px;
+    }
 }
 
+/*-----------------Mobile Devices-------------------------*/
+@media screen and (width < 800px){
+    .main {
+        transform: scale(80%);
+    }
+
+    .main img { 
+        width: calc(80vw - 35%);
+        border-radius: 50px;
+    }
+}
+
+
 /*------------Guarantee Settings-------------------*/
+
 .guarantee {
     display: flex;
     justify-content: center;
     text-align: center;
     color : white;
+    gap: 5vw; 
+    margin: 0 4vw 0 4vw
+}
+
+/*------------------Desktop-------------------*/
+@media screen and (width >= 800px){
+
+
+
+}
+
+/*-----------------Mobile Devices-------------------------*/
+@media screen and (width < 800px){
     
-    gap: 50px
+
+
 }
 
 .item {
