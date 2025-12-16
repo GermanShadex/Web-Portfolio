@@ -27,6 +27,26 @@ body {
     gap: 30px;
 }
 
+.navbar ul li {
+    list-style: none;
+    
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: rgba(221, 173, 15, 0.87);
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: rgba(255, 215, 0, 0.87);
+    text-shadow: 2 px 2px 4px rgba(255, 215, 0, 0.87);
+}
+
+.navbar ul li:last-child a {
+    margin: 0;
+}
+
 /*-----------------Desktops---------------------------------*/
 @media screen and (width >= 800px){
     .navbar {
@@ -86,25 +106,6 @@ body {
 
 }
 
-.navbar ul li {
-    list-style: none;
-    
-}
-
-.navbar ul li a {
-    text-decoration: none;
-    color: rgba(221, 173, 15, 0.87);
-    transition: color 0.3s ease;
-}
-
-.navbar ul li a:hover {
-    color: rgba(255, 215, 0, 0.87);
-    text-shadow: 2 px 2px 4px rgba(255, 215, 0, 0.87);
-}
-
-.navbar ul li:last-child a {
-    margin: 0;
-}
 /*---------------------Hire Me Button------------------------*/
 
 .hire-btn::before {
@@ -155,9 +156,34 @@ body {
 }
 
 /*-----------MainPage Settings----------------*/
+
+
+/*------------------Desktop-------------------*/
+@media screen and (width >= 800px){
+    .main {
+        height: 100vh;
+    }
+
+    .main p.titel {
+        text-wrap: nowrap;
+        
+    }
+}
+
+/*-----------------Mobile Devices-------------------------*/
+@media screen and (width < 800px){
+    .main {
+        transform: scale(80%);
+    }
+
+
+
+
+}
+
+
 .main {
     display: flex;
-    height: 640px;
     flex-direction: column;
     gap: 10px;
     align-items: center;
