@@ -8,23 +8,18 @@
 }
 
 body {
-    height: 100hv;
+    height: 100%;
     background-color: rgb(26, 24, 31);
+    overflow-x: hidden;
 }
 
 /*-----------------Navigation Bar Settings-----------------*/
 .navbar {
-    display :flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 80px;
-    padding: 0 20px;
-}
-
-.navbar h2 {
-    color: rgba(221, 173, 15, 0.87);
-    font-weight: 600;
+    color: rgba(221, 173, 15, 0.87); 
     text-wrap: nowrap;
+    
+    padding: 0 2vh;
+
 }
 
 .navbar ul {
@@ -32,15 +27,73 @@ body {
     gap: 30px;
 }
 
+/*-----------------Desktops---------------------------------*/
+@media screen and (width >= 800px){
+    .navbar {
+        display :flex;
+        justify-content: space-between;
+        margin-top: 1%;
+        align-items: center;
+    }
+
+    .navbar h2 {
+        font-size: 40px;
+    }
+
+    .navbar ul {
+        gap: 5vw;
+    }
+
+    .navbar ul li a {
+        font-size: 2em;
+    }
+}
+
+/*-----------------Mobile Devices-------------------------*/
+@media screen and (width < 800px){
+    .navbar {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 8px;
+        row-gap: 0.5vh;
+        margin-top: 2%;
+    }
+
+    .navbar h2{
+        grid-column-start: 2;
+        text-align: center;
+        font-size: 3vh;
+        place-self: center;
+    }
+
+    .holografic-container {
+        grid-column-start: 3;
+        transform: scale(60%);
+    }
+
+    .navbar ul {
+        grid-column: span 3 / span 3;
+        grid-row-start: 2;
+        justify-content: center;
+        align-items: center;
+        gap: 2vw;
+    }
+
+    .navbar ul li a {
+        font-size: 1em;
+    }
+
+}
+
 .navbar ul li {
     list-style: none;
+    
 }
 
 .navbar ul li a {
     text-decoration: none;
     color: rgba(221, 173, 15, 0.87);
-    font-size: 20px;
-    margin-right: 25px;
     transition: color 0.3s ease;
 }
 
@@ -80,7 +133,7 @@ body {
     border-color: rgba(221, 173, 15, 0.87);
     background-color: rgba(26, 24, 31);
     height: 40px;
-    width: 100px;
+    width: 110px;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
