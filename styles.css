@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto Flex', sans-serif;
-    font-size: 12px;
+    font-size: 2vw;
 }
 
 body {
@@ -44,7 +44,7 @@ body {
 
 .navbar ul li a:hover {
     color: rgba(255, 215, 0, 0.87);
-    text-shadow: 2px 2px 4px rgba(255, 215, 0, 0.87);
+    text-shadow: 2px 1px 4px rgba(255, 215, 0, 0.87);
 }
 
 .navbar ul li:last-child a {
@@ -69,7 +69,7 @@ body {
     }
 
     .navbar ul li a {
-        font-size: 2em;
+        font-size: calc(10px + 1.3vw);
     }
 
     .hire-btn {
@@ -185,7 +185,7 @@ body {
 }
 
 .main h4 {
-    font-size: 32px;
+    
     color: white;
     font-weight: 600;
 }
@@ -198,13 +198,12 @@ body {
 
 
 .main p.title {
-    font-size: 44px;
     color : white;
     text-align: center;
 }
 
 .main p.subtitle {
-    font-size: 18px;
+    
     text-align: center;
     color:rgb(180, 180, 180);
 }
@@ -217,10 +216,19 @@ body {
         height: 100vh;
     }
 
-    .main p.titel {
-        text-wrap: nowrap;
-        
+    .main h4 {
+        font-size: 4vw;
     }
+
+    .main p.title {
+        text-wrap: nowrap;
+        font-size: 2.3vw;
+    }
+
+    .main p.subtitle {
+        font-size: 1.2vw;
+    }
+
     .main img {
         margin-top: 50px;    
         width: 20vw;
@@ -232,6 +240,18 @@ body {
 @media screen and (width < 800px){
     .main {
         transform: scale(80%);
+    }
+
+    .main h4 {
+        font-size: 12vw;
+    }
+
+    .main p.title {
+        font-size: 11vw;
+    }
+
+    .main p.subtitle {
+        font-size: 4.7vw;
     }
 
     .main img { 
@@ -252,31 +272,42 @@ body {
     margin: 0 4vw 0 4vw
 }
 
-/*------------------Desktop-------------------*/
-@media screen and (width >= 800px){
-
-
-
-}
-
-/*-----------------Mobile Devices-------------------------*/
-@media screen and (width < 800px){
-    
-
-
-}
-
 .item {
-    width : 250px;
-    height: 100%;
     background-color: rgba(255,255,255, 0.05);
     padding: 20px;
     border-radius: 20px;
     transition: all 0.3 ease;
 }
 
+/*------------------Desktop-------------------*/
+@media screen and (width >= 800px){
+
+    .item {
+        width: 50vw;
+        height: auto;
+    }
+
+    .item h3, p {
+        font-size: 1.5vw;
+    }
+
+    .item i {
+        font-size: 2.5vw;
+    }
+
+}
+
+/*-----------------Mobile Devices-------------------------*/
+@media screen and (width < 800px){
+    
+    .item {
+        width: 30vw;
+        height: auto;
+    }
+
+}
+
 .guarantee .item .icon {
-    font-size: 30px;
     margin-bottom: 12px;
 }
 
