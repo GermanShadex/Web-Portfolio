@@ -5,31 +5,97 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto Flex', sans-serif;
-    font-size: 2vw;
+    font-size: 18px;
 }
 
 body {
     height: 100%;
     background-color: rgb(26, 24, 31);
     overflow-x: hidden;
+    margin-top: 2vw;
+}
+
+/*-----------------Desktop Modus----------------------------*/
+@media screen  and (width >= 950px){
+/*-----------------Navigation Bar Settings-----------------*/
+    .navbar {
+        display :flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }  
+
+    .navbar ul li a {
+        font-size: calc(10px + 1.3vw);
+    }
+
+    .hire-btn {
+        height: 40px;
+        width: 110px;
+        font-size: 18px;
+        border-radius: 10px;
+    }
+
+}
+
+/*-----------------Mobile Devices-------------------------*/
+@media screen and (width < 950px){
+    .navbar {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 8px;
+        row-gap: 0.5vh;
+    }
+
+    .navbar h2{
+        grid-column-start: 2;
+        font-size: calc(12px + 2vw);
+        text-align: center;
+        place-self: center;
+    }
+
+    .holografic-container {
+        grid-column-start: 3;
+        display: flex;
+        justify-self: center;
+    }
+
+    .hire-btn {
+        height: calc(23px + 2vw);
+        width: calc(100px + 2vw);
+        font-size: 1rem;
+        border-radius: 8px;
+    }
+
+    .navbar ul {
+        grid-column: span 3 / span 3;
+        grid-row-start: 2;
+        justify-content: center;
+        align-items: center;
+        gap: 2vw;
+    }
+
+    .navbar ul li a {
+        font-size: calc(10px + 1vw);
+    }
+
 }
 
 /*-----------------Navigation Bar Settings-----------------*/
 .navbar {
-    color: rgba(221, 173, 15, 0.87); 
     text-wrap: nowrap;
-    padding: 0 3vw;
+    margin: 0 2vw;
+    color: rgba(221, 173, 15, 0.87); 
 }
 
 .navbar h2 {
-    font-size: 30px;
+    font-size: 40px;
 }
-
 
 .navbar ul {
     display: flex;
-    gap: 30px;
-    margin: 0 2vw 0 2vw;
+    gap: 5vw;
+    align-items: center;
 }
 
 .navbar ul li {
@@ -51,83 +117,15 @@ body {
     margin: 0;
 }
 
-/*-----------------Desktops---------------------------------*/
-@media screen and (width >= 950px){
-    .navbar {
-        display :flex;
-        justify-content: space-between;
-        margin-top: 1%;
-        align-items: center;
-    }
-
-    .navbar h2 {
-        font-size: 5vh;
-}
-
-    .navbar ul {
-        gap: 5vw;
-    }
-
-    .navbar ul li a {
-        font-size: calc(10px + 1.3vw);
-    }
-
-    .hire-btn {
-        height: 40px;
-        width: 110px;
-        font-size: 18px;
-        border-radius: 10px;
-    }
-}
-
-/*-----------------Mobile Devices-------------------------*/
-@media screen and (width < 950px){
-    .navbar {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        gap: 8px;
-        row-gap: 0.5vh;
-        margin-top: 2%;
-    }
-
-    .navbar h2{
-        grid-column-start: 2;
-        font-size: calc(12px + 3vw);
-        text-align: center;
-        place-self: center;
-    }
-
-    .holografic-container {
-        grid-column-start: 3;
-    }
-
-    .holografic-container .button-container {
-        justify-self: end;
-    }
-
-    .hire-btn {
-        height: calc(10px + 2vh);
-        width: calc(50px + 2vw);
-        font-size: calc(3px + 1vw);
-        border-radius: 8px;
-    }
-
-    .navbar ul {
-        grid-column: span 3 / span 3;
-        grid-row-start: 2;
-        justify-content: center;
-        align-items: center;
-        gap: 2vw;
-    }
-
-    .navbar ul li a {
-        font-size: calc(10px + 1vw);
-    }
-
-}
-
 /*---------------------Hire Me Button------------------------*/
+.holografic-container {
+    display: flex;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+}
 
 .hire-btn::before {
     content: '';
@@ -166,7 +164,6 @@ body {
     box-shadow: 0 0 20px rgba(221, 173, 15, 0.87);
     color: rgba(221, 173, 15);
 }
-
 
 .hire-btn:hover::before {
     opacity: 1;
