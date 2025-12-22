@@ -5,14 +5,14 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto Flex', sans-serif;
-    font-size: 18px;
+    font-size: 2vw;
 }
 
 body {
     height: 100%;
     background-color: rgb(26, 24, 31);
     overflow-x: hidden;
-    margin-top: 2vw;
+    margin-top: 18px;
 }
 
 /*-----------------Desktop Modus----------------------------*/
