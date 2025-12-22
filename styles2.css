@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Pixelify+Sans:wght@400..700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+html {
+    font-size: 24px;
+    color: rgba(221, 173, 15, 0.87); 
+}
+
+body {
+    height: 100%;
+    background-color: rgb(26, 24, 31);
+    overflow-x: hidden;
+    margin: 2vw 4vw;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*---------------------Hire Me Button------------------------*/
+.holografic-container {
+    display: flex;
+}
+
+.button-container {
+    display: flex;
+}
+
+.hire-btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        0deg, 
+        transparent, 
+        transparent 30%, 
+        rgba(221, 173, 15, 0.5)
+    );
+    transform: rotate(-45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.hire-btn {
+    color: rgba(221, 173, 15, 0.87);
+    font-weight: 400;
+    border-width: 1;
+    border-color: rgba(221, 173, 15, 0.87);
+    background-color: rgba(26, 24, 31);
+
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+
+    cursor: pointer;
+
+    height: 4vw;
+    width: 10vw;
+    font-size: 1rem;
+    border-radius: 1rem;
+}
+
+.hire-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(221, 173, 15, 0.87);
+    color: rgba(221, 173, 15);
+}
+
+.hire-btn:hover::before {
+    opacity: 1;
+    transform: rotate(-45deg) translateY(110%);
+}
+
+.pfeil {
+    display: inline-block;
+    transform: scale(-1,1);
+}
+
+/*--------------Main--------------------*/
+
+.gallery-grid {
+    display: flex;
+    flex-direction: row;
+    margin: 2vw 4vw;
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255,255,255, 0.05);
+}
