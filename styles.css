@@ -5,7 +5,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto Flex', sans-serif;
-    font-size: 2vw;
+}
+
+html {
+    font-size: 16px;
 }
 
 body {
@@ -25,7 +28,7 @@ body {
     }  
 
     .navbar ul li a {
-        font-size: calc(10px + 1.3vw);
+        font-size: calc(12px + 1.3vw);
     }
 
     .hire-btn {
@@ -335,7 +338,7 @@ body {
 .about-container {
     display: flex;
     align-items: center;
-    margin: 2vw 4vw;
+    margin: 3vw 4vw;
     gap: 2vw;
 }
 
@@ -357,9 +360,35 @@ body {
     list-style: none;
 }
 
-#career-info span {
+#career-info ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#career-info ul li {
+    display: grid;
+    grid-template-columns: minmax(0, 9ch) 1fr;
+    column-gap: 1rem;
+    align-items: baseline;
+}
+
+#career-info .date {
     font-weight: 600;
 }
+
+@media screen and (width <= 800px) {
+    .about-container {
+        flex-direction: column;
+    }
+
+    .aboutme {
+        width: 100%;
+    }
+
+
+}
+
 
 /*-----------------Skill Settings-------------------*/
 .skill-container {
