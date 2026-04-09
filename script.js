@@ -39,7 +39,7 @@ function handleGalleryToggleClick() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const uploadButton = document.getElementById('uploadButton');
-    const uploadurl = 'https://github.com/GermanShadex/Web-Portfolio/upload/main';
+    const uploadurl = 'https://github.com/GermanShadex/Web-Portfolio/upload/main/artgallery';
 
     uploadButton.addEventListener('click', function()
 {
