@@ -25,6 +25,37 @@ body {
     justify-content: space-between;
 }
 
+.header h1 {
+    font-size: 2rem;
+}
+
+/*----------------------Add Picture-------------------------*/
+
+.Add-Pic-Container {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-pic-button {
+    color:rgba(221, 173, 15);
+    background-color: transparent;
+    border-width: 0;
+}
+
+.add-pic-button .bx-plus-circle {
+    font-size: 2rem;
+}
+
+.add-pic-button .bx-plus-circle:hover {
+    cursor: pointer;
+    font-size: 2.2rem;
+
+    text-shadow: 0 0 20px rgba(221, 173, 15, 0.87);
+}
+
 /*---------------------Hire Me Button------------------------*/
 .holografic-container {
     display: flex;
@@ -53,6 +84,10 @@ body {
 }
 
 .hire-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     color: rgba(221, 173, 15, 0.87);
     font-weight: 400;
     border-width: 1;
@@ -88,6 +123,23 @@ body {
 }
 
 /*--------------Main--------------------*/
+.profile-header {
+    margin: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-picture img {
+    height: 10vw;
+    width: auto;
+    margin-right: 2vw;
+    border-radius: 50%;
+}
+
+.profile-infos p {
+    font-size: 0.8rem;
+}
 
 .gallery-grid {
     display: flex;
