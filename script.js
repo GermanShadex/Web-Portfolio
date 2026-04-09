@@ -1,6 +1,7 @@
 const logo = document.getElementById('logo');
 let initialLogoBorderRadius = '';
 
+
 if (logo) {
     initialLogoBorderRadius = window.getComputedStyle(logo).borderRadius;
     logo.addEventListener('click', ShowQRCode);
@@ -35,3 +36,14 @@ function handleGalleryToggleClick() {
     const targetUrl = isGalleryPage ? "index.html#home" : "gallery.html";
     window.location.href = targetUrl;
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const uploadButton = document.getElementById('uploadButton');
+    const uploadurl = 'https://github.com/GermanShadex/Web-Portfolio/upload/main';
+
+    uploadButton.addEventListener('click', function()
+{
+    window.open(uploadurl, '_blank');
+});
+
+});
